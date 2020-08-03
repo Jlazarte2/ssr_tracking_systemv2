@@ -24,73 +24,88 @@
         <div class="p3-content">
             <div class="form">
                 <form method="POST" action="./php/newrequest.php" enctype="multipart/form-data" autocomplete="off">
+                    
                     <h2>SSR Request Details</h2>
-                    <label for="subject">Import a file:</label>
-                    <input class="center-block" type="file" name="myfile[]" multiple="multiple"><br>
-                    <label for="subject">Subject:</label>
-                    <input type="text" id="subject" name="subject"><br>
-
+                    <p>
+                        <label for="subject">Import a file:</label>
+                        <input class="center-block" type="file" name="myfile[]" multiple="multiple">
+                    </p>
+                    <p>
+                        <label for="subject">Subject:</label>
+                        <input type="text" id="subject" name="subject">
+                    </p>
                     <!-- <label for="usyd_no">Usyd Service request reference:</label>
                     <input type="text" id="usyd_no" name="usyd_no" value="usyd_no" required><br> -->
-
-                    <label for="priority">Usyd Priority:</label>
-                    <select id="priority" name="priority">
-                        <option value="p1">P1 - Critical</option>
-                        <option value="p2">P2 - High</option>
-                        <option value="p3">P3 - Moderate</option>
-                        <option selected="p4" value="p4">P4 - Low</option>
-                    </select><br><br>
-
+                    <p>
+                        <label for="priority">Usyd Priority:</label>
+                        <select id="priority" name="priority">
+                            <option value="p1">P1 - Critical</option>
+                            <option value="p2">P2 - High</option>
+                            <option value="p3">P3 - Moderate</option>
+                            <option selected="p4" value="p4">P4 - Low</option>
+                        </select><br>
+                    </p>
+                    <br>
 
                     <b><label for="sequencing">Usyd Sequencing:</label></b><br>
-
-                    <label for="applicable">Applicable (yes/no):</label>
-                    <select id="applicable" name="applicable">
-                        <option value="yes">Yes</option>
-                        <option value="no">No</option>
-                    </select><br>
-
-                    <label for="sre_name">Usyd Person responsible to coordinate:</label>
-                    <input type="text" id="sre_name" name="sre_name" required><br>
-
-                    <label for="prior">Actions to be done prior to this SSR:</label>
-                    <input type="text" id="prior" name="prior"><br>
-
-                    <label for="action">Actions to be done after this SSR:</label>
-                    <input type="text" id="action" name="action"><br><br>
-
-                    <label for="ssr_owner">Service Request Owner:</label>
-                    <input type="text" id="ssr_owner" name="ssr_owner" required><br><br>
+                    <p>
+                        <label for="applicable">Applicable (yes/no):</label>
+                        <select id="applicable" name="applicable">
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>
+                        </select><br>
+                    </p>
+                    <p>
+                        <label for="sre_name">Usyd Person responsible to coordinate:</label>
+                        <input type="text" id="sre_name" name="sre_name" required><br>
+                    </p>
+                    <p>
+                        <label for="prior">Actions to be done prior to this SSR:</label>
+                        <input type="text" id="prior" name="prior"><br>
+                    </p>
+                    <p>
+                        <label for="action">Actions to be done after this SSR:</label>
+                        <input type="text" id="action" name="action">
+                    </p>
+                    <p>
+                        <label for="ssr_owner">Service Request Owner:</label>
+                        <input type="text" id="ssr_owner" name="ssr_owner" required>
+                    </p>
+                    <br>
 
                     <b><label for="exe">Execution Window:</label></b><br>
-
-                    <label for="exec_date">Date:</label>
-                    <input type="date" id="exec_date" name="exec_date" required><br>
-
-                    <label for="start_time">Start time (24hr Time):</label>
-                    <input type="time" id="start_time" name="start_time" required><br>
-
-                    <label for="end_time">End time (24hr Time):</label>
-                    <input type="time" id="end_time" name="end_time" required><br>
-
-                    <label for="usyd_cat">Service Request Category: (Select the applicable category)</label>
-                    <select id="usyd_cat" name="usyd_cat">
-                        <option value="asa">ASA Firewall</option>
-                        <option value="backup">Backup</option>
-                        <option value="oracle">Database Oracle</option>
-                        <option value="sql">Database SQL</option>
-                        <option value="f5">F5</option>
-                        <option value="msv">MSV CloudOps</option>
-                        <option value="nsx">NSX Firewall</option>
-                        <option value="aws">Public Aws CloudOps</option>
-                        <option value="azure">Public Azure CloudOps</option>
-                        <option value="storage">Storage Team</option>
-                        <option value="unix">Unix/Linux</option>
-                        <option value="vmware">VMWare</option>
-                        <option value="wintel">Wintel</option>
-                    </select><br><br>
-
-                    <label for="classification">Classification of Request</label>
+                    <p>
+                        <label for="exec_date">Date:</label>
+                        <input class="test" type="date" id="exec_date" name="exec_date" required><br>
+                    </p>
+                    <p>
+                        <label for="start_time">Start time (24hr Time):</label>
+                        <input type="time" id="start_time" name="start_time" required><br>
+                    </p>
+                    <p>
+                        <label for="end_time">End time (24hr Time):</label>
+                        <input type="time" id="end_time" name="end_time" required><br>
+                    </p>
+                    <p>
+                        <label for="usyd_cat">Service Request Category: (Select the applicable category)</label>
+                        <select id="usyd_cat" name="usyd_cat">
+                            <option value="asa">ASA Firewall</option>
+                            <option value="backup">Backup</option>
+                            <option value="oracle">Database Oracle</option>
+                            <option value="sql">Database SQL</option>
+                            <option value="f5">F5</option>
+                            <option value="msv">MSV CloudOps</option>
+                            <option value="nsx">NSX Firewall</option>
+                            <option value="aws">Public Aws CloudOps</option>
+                            <option value="azure">Public Azure CloudOps</option>
+                            <option value="storage">Storage Team</option>
+                            <option value="unix">Unix/Linux</option>
+                            <option value="vmware">VMWare</option>
+                            <option value="wintel">Wintel</option>
+                        </select>
+                    </p>
+                    <p>
+                        <label for="classification">Classification of Request</label>
                     <select id="classification" name="classification">
                         <option value="Backup: Removal of Backup">Backup: Removal of Backup</option>
                         <option value="Others">Others</option>
@@ -103,7 +118,9 @@
                         <option value="Wintel: Server Reboot">Wintel: Server Reboot</option>
                         <option value="Wintel: VM Snapshot Create">Wintel: VM Snapshot Create</option>
                         <option value="Wintel: VM Snapshot Delete">Wintel: VM Snapshot Delete</option>
-                    </select><br><br>
+                    </select>
+                    </p>
+                    <br>
 
                     <b><label for="perform">Please perform the following steps on</label></b><br>
 
@@ -112,6 +129,7 @@
                     
                     <button type="submit" id="create_request">Create Request</button><br>
                 </form>
+                <br>
                 <button type="button" id="back" onclick="goBack()">Back</button>
             </div>
         </div>
