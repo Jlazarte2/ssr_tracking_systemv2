@@ -13,7 +13,7 @@ $state = $_POST['state'];
     $query2 = mysqli_query($connections, "SELECT * FROM ssr_tracker WHERE dxc_ssr='$dxcssr';");
     $row2 = mysqli_fetch_assoc($query2);
     $description = $row2['description'];
-    $reqeustor = $row2['client_email'];
+    $reqeustor = $row2['client_mail'];
     $ritm = $row2['usyd_no'];
 
     //email
