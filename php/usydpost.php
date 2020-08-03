@@ -16,7 +16,7 @@ $ritm_no = $row['ritm_no'];
             alert('New Request for Usyd has been made. $number has been created!');
             </script>"; 
 
-    if ($classification == 'other'){
+    if ($classification == 'Others'){
         echo "<script>
             window.location.href='./normal.php';
             </script>"; 
