@@ -12,6 +12,7 @@ if($check_employee_row > 0){
         $db_email = $row["user_email"];
 
         $_SESSION['user_email'] = $db_email;
+        $_SESSION['user_type'] = $db_type;
         
             if($_POST["password"] == $db_password){
                 if($db_type == "admin"){

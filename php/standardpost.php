@@ -3,7 +3,7 @@ include ("./connections.php");
 session_start();
 
 $current_email = $_SESSION['user_email'];
-
+$user_type = $_SESSION['user_type'];
 
 $dxcssr = $_GET['dxcssr'];
 $sys_id = $_GET['sys_id'];
@@ -39,7 +39,7 @@ if($query = mysqli_query($connections, "INSERT INTO ssr_snow(dxc_ssr, sys_id, nu
             $mail->isHTML(true);
             $m1 = "Hi, <br><br>";
             $m2 = "This is acknowledged. <br><br>";
-            $m3 = "The DXC SSR No. is <b>DXCSSR$dxcssr</b>, with USYD Reference No. is <b>$ritm</b>.<br>";
+            $m3 = "The DXC SSR No. is <b>DXCSSR$dxcssr</b>, with USYD Reference No. is RITM<b>$ritm</b>.<br>";
             $m4 = "The change no. in SNOW is " . "<b>$number</b>" . " and in " . "<b>$state</b>" . " state.<br><br>";
             $m5 = "Regards, <br> SSR Triage Team <br> DXC Technology";
             $message = $m1.$m2.$m3.$m4.$m5;
@@ -53,11 +53,19 @@ if($query = mysqli_query($connections, "INSERT INTO ssr_snow(dxc_ssr, sys_id, nu
                 echo 'Successful.';
             }  
 
+            if($user_type == "admin"){
                 echo "<script>
                 alert('New Request has been made. $number has been created!');
                 window.location.href='../admin.html';
                 </script>"; 
             }
+            else{
+                echo "<script>
+                alert('New Request has been made. $number has been created!');
+                window.location.href='../customer.html';
+                </script>";
+            }
+        }
 
 
                       
